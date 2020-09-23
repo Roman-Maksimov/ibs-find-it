@@ -1,9 +1,10 @@
 import React from 'react';
+import { Slider } from './slider/slider';
 import './app.scss';
 
 const App = () => (
   <div className="app">
-    Application will be here...
+    <Slider />
   </div>
 );
 

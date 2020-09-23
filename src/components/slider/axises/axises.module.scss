@@ -1,0 +1,70 @@
+@import '../../../common/styles';
+
+$main-axis-color: #ccc;
+$grid-line-color: #eee;
+
+:local {
+  .axises {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid $main-axis-color;
+    border-right: 3px solid $main-axis-color;
+  }
+
+  .back {
+    @include isometricBack;
+
+    width: 340px;
+    border-top: 3px solid $main-axis-color;
+  }
+
+  .hGrid {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+  }
+
+  .vGrid {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 37px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .hGridLine {
+    position: relative;
+    top: -3px;
+    width: $bar-size;
+    height: 100%;
+    border-right: 2px solid $grid-line-color;
+    box-sizing: border-box;
+  }
+
+  .vGridLine {
+    position: relative;
+    width: 100%;
+    height: $bar-size;
+    margin-bottom: $bar-margin;
+
+    &:before {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      margin-left: -1px;
+      background-color: $grid-line-color;
+      content: '';
+    }
+  }
+}
