@@ -28,9 +28,6 @@ export class Slider extends React.PureComponent {
     public render() {
         return (
             <div className={styles.slider}>
-                <div className={styles.arrowLeft} onClick={this.onNextClick} />
-                <div className={styles.arrowRight} onClick={this.onPrevClick} />
-
                 <div className={styles.content}>
                     <Axises count={data[this.state.index].length} />
 
@@ -38,6 +35,9 @@ export class Slider extends React.PureComponent {
                         <Bar key={index} percent={item} />
                     ))}
                 </div>
+
+                <div className={styles.arrowLeft} onClick={this.onNextClick} />
+                <div className={styles.arrowRight} onClick={this.onPrevClick} />
             </div>
         );
     }
