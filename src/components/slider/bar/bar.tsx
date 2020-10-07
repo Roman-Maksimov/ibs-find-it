@@ -8,7 +8,7 @@ export interface IBarProps {
 export const MAX_SIZE = 300;
 
 export const Bar = ({ percent = 0 }: IBarProps) => {
-    const size = 300 * percent / 100;
+    const size = MAX_SIZE * percent / 100;
 
     return (
         <div className={styles.bar}>

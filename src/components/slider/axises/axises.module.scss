@@ -17,7 +17,7 @@ $grid-line-color: #eee;
   .back {
     @include isometricBack;
 
-    width: 340px;
+    width: $bar-max-size + $content-padding;
     border-top: 3px solid $main-axis-color;
   }
 
@@ -27,14 +27,14 @@ $grid-line-color: #eee;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 300px;
+    width: $bar-max-size;
   }
 
   .vGrid {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 37px;
+    top: $bar-size / 2 + 3px;
     right: 0;
     bottom: 0;
     left: 0;

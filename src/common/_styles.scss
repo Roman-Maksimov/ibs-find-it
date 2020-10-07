@@ -1,6 +1,7 @@
 $animation-function: cubic-bezier(.2, .4, .2, .4);
 $bar-size: 60px;
 $bar-margin: 40px;
+$bar-max-size: 300px;
 $content-padding: 40px;
 
 @mixin isometric {
